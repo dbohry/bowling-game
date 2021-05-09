@@ -1,0 +1,22 @@
+plugins {
+    id 'groovy'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.0'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+    testImplementation('org.spockframework:spock-core:1.3-groovy-2.5') {
+        exclude group: 'org.codehaus.groovy'
+    }
+    testImplementation 'org.codehaus.groovy:groovy:2.5.11'
+    testImplementation 'org.codehaus.groovy:groovy-json:2.5.11'
+    testImplementation 'org.codehaus.groovy:groovy-templates:2.5.11'
+}
